@@ -1,0 +1,52 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+    <form class="form-contact contact_form container" action="/contact/" method="post" id="contactForm"
+    novalidate="novalidate">
+    <h1>Contact us form</h1>
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="first_name">Enter first name</label>
+                {{ form.first_name }}
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="last_name">Enter last name</label>
+                {{ form.last_name }}
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label for="email">Enter Email id</label>
+                {{ form.emailid }}
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <label for="phone_number">Enter phone number</label>
+                {{form.phone_number}}
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                {{form.subject}}
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+                <label for="Message">Enter Message</label>
+                {{form.message}}
+            </div>
+        </div>
+    </div>
+    <div class="form-group mt-lg-3">
+        <button type="submit" class="btn btn-outline-success">Send Message</button>
+    </div>
+    </form>
+{% endblock %}
