@@ -29,7 +29,6 @@ MarkupSafe==2.1.2
 
 pep8==1.7.1
 
-pycurl==7.45.1
 PyDispatcher==2.0.5
 
 PyJWT==2.6.0
